@@ -43,7 +43,7 @@ module.exports.languages = {
 
 // 🔹 https://imgur.com/a/0JqwGf0
 const helpImages = [
-    "https://i.imgur.com/sxSn1K3.jpeg",
+    "https://imgur.com/a/0JqwGf0",
     "https://i.imgur.com/8WvpgUL.jpeg",
     "https://i.imgur.com/8WvpgUL.jpeg",
     "https://i.imgur.com/sxSn1K3.jpeg"
@@ -80,7 +80,7 @@ module.exports.handleEvent = function ({ api, event, getText }) {
         command.config.commandCategory || "Unknown",  
         command.config.cooldowns || 0,  
         prefix,  
-        global.config.BOTNAME || "𝐒𝐡𝐚𝐡𝐚𝐝𝐚𝐭 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭"  
+        global.config.BOTNAME || "𝐉𝐮𝐛𝐚𝐲𝐞𝐫 𝐗 𝐁𝐨𝐭"  
     );  
 
     downloadImages(files => {  
@@ -143,8 +143,8 @@ module.exports.run = function ({ api, event, args, getText }) {
 ${msg}
 ┣━━━━━━━━━━━━━━━━┫
 ┃ ⚙ Prefix: ${prefix}
-┃ 🤖 Bot Name: ${global.config.BOTNAME || "𝐒𝐡𝐚𝐡𝐚𝐝𝐚𝐭 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭"}
-┃ 👑 Owner: 𝐒𝐇𝐀𝐇𝐀𝐃𝐀𝐓 𝐒𝐀𝐇𝐔
+┃ 🤖 Bot Name: ${global.config.BOTNAME || "𝐉𝐮𝐛𝐚𝐲𝐞𝐫 𝐗 𝐁𝐨𝐭"}
+┃ 👑 Owner: Jubayer Baby
 ╰━━━━━━━━━━━━━━━━╯`;
 
     downloadImages(files => {  
