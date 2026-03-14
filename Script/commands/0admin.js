@@ -5,13 +5,82 @@ module.exports.config = {
   name: "0admin",
   version: "2.0.0", //don't change credit
   hasPermssion: 2,
-  credits: "SHAHADAT SAHU",
+  credits: "MD Jubayer",
   description: "Admin Management System",
   commandCategory: "Admin",
   usages: "[list | add | remove | only | boxonly] [uid | @mention | reply]",
   cooldowns: 0,
   usePrefix: true,
   dependencies: { "fs-extra": "" }
+};
+
+module.exports.languages = {
+  en: {
+    listAdmin: "👑 Admin List:\n\n%1",
+    noPermission: "❎ You don't have permission to use \"%1\"",
+    addedAdmin: "✅ Added %1 admin(s):\n\n%2",
+    removedAdmin: "✅ Removed %1 admin(s):\n\n%2",
+    adminOnlyOn: "Admin-only mode enabled....🔓",
+    adminOnlyOff: "Admin-only mode disabled✅",
+    boxOnlyOn: "Group admin-only mode enabled....🔓",
+    boxOnlyOff: "Group amode disabled✅"
+  }
+};
+
+module.exports.onLoad = () => {
+  const path = resolve(__dirname, "cache", "data.json");
+  if (!existsSync(path)) writeFileSync(path, JSON.stringify({ adminbox: {} }, null, 4));
+};
+
+module.exporun = async function ({ api, event, args, Users, permssion, getText }) {
+  const { threadID, messageID, mentions } = event;
+  const content = args.slice(1);
+  const mentionIDs = Object.keys(mentions);
+  const { configPath } = global.client;
+
+  delete require.cache[require.resolve(configPath)];
+  const config = require(configPath);
+
+  const ADMINBOT = global.config.ADMINBOT || config.ADMINBOT || [];
+
+  const getUIDs = () => {
+    if (event.type === "message_reply") return [event.messageReply.senderID];
+    if (mentionIDs.length) return mentionIDs;
+    if (!isNaN(content[0])) return [content[0]];
+    return [];
+  };
+
+  switch (args[0]) {
+    case "list":
+    case "all": {
+      const msg = [];
+      for (const id of ADMINBOT) {
+        const name = (await Users.getData(id)).name;
+        msg.push(`• ${name}\nhttps://facebook.com/${id}`);
+      }
+      return api.sendMessage(getText("listAdmin", msg.join("\n\n")), threadID, messageID);
+    }
+
+    case "add": {
+      if (permssion != 3) return api.sendMessage(getText("noPermission", "add"), threadID, messa.run = async function ({ api, event, args, Users, permssion, getText }) {
+  const { threadID, messageID, mentions } = event;
+  const content = args.slice(1);
+  const mentionIDs = Object.keys(mentions);
+  const { configPath } = global.client;
+
+  delete require.cache[require.resolve(configPath)];
+  const config = require(configPath);
+
+  const ADMINBOT = global.config.ADMINBOT || config.ADMINBOT || [];
+
+  const getUIDs = () => {
+    if (event.type === "message_reply") return [event.messageReply.senderID];
+    if (mentionIDs.length) return mentionIDs;
+    if (!isNaN(content[0])) return [content[0]];
+    return [];
+  };
+
+  switch
 };
 
 module.exports.languages = {
