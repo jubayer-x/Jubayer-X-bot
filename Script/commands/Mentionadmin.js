@@ -2,7 +2,7 @@ module.exports.config = {
  name: "adminmention",
  version: "1.0.0",
  hasPermssion: 0,
- credits: "SHAHADAT SAHU ",
+ credits: "Jubayer Baby ",
  description: "Bot will reply when someone tags any of the admins",
  commandCategory: "Other",
  usages: "@",
@@ -10,7 +10,7 @@ module.exports.config = {
 };
 
 module.exports.handleEvent = function({ api, event }) {
- const adminIDs = ["61586663640808", "61586663640809", "100044713412032"].map(String); //update your UID✅
+ const adminIDs = ["100064028587522", "100064028587522", "100064028587522"].map(String); //update your UID✅
  
  if (adminIDs.includes(String(event.senderID))) return;
 
@@ -32,7 +32,7 @@ module.exports.handleEvent = function({ api, event }) {
  "মেনশন না দিয়া বস বল বস 🥵💋",
  "কিরে তোর এতো সাহস আমার বসের নাম ধরিস😾🫵",
  "এতো মেনশন না দিয়া তোর গার্লফ্রেন্ডটারে দিয়া দে😹🐸",
- "মেনশন দিয়ে লাভ নাই বস সাহু এখন বিজি আছেন😗😘"
+ "মেনশন দিয়ে লাভ নাই বস জুবু এখন বিজি আছেন😗😘"
  ];
  return api.sendMessage(replies[Math.floor(Math.random() * replies.length)], event.threadID, event.messageID);
  }
