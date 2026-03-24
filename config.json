@@ -12,15 +12,15 @@
   "PASSWORD": "your password",
   "OTPKEY": "",
   "BOTNAME": "𝐉𝐮𝐛𝐮 𝐗 𝐁𝐨𝐭",
-  "PREFIX": "/",
+  "PREFIX": ".",
   "reactUnsend": ["😡", "🤧", "😤", "😠"],
 
   "ADMINBOT": [
-    "100064028587522",
+    "100000042232275",
     "",
     ""
   ],
-  "NDH": ["100064028587522"],
+  "NDH": ["100000042232275"],
   "adminOnly": false,
   "ndhOnly": false,
   "adminPaOnly": false,
